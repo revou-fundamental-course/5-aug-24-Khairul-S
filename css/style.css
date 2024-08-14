@@ -18,3 +18,9 @@ aside {
 h1 {
     text-align: center;
 }
+
+@media only screen and (max-width: 600px){
+    main {
+        flex-direction: column;
+    }
+}    
