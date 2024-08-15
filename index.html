@@ -10,88 +10,79 @@
     <header>
         <h1>Kalkulator BMI</h1>
     </header>
-    <main>
-        <aside>
-            <article>
-                <p>Ini isinya kalimat pembuka kalkulator BMI</p>
-            </article>
-    
-            <form>
+      <main>
+            <form id="bmi-form">
                 <div>
                     <h3>Jenis Kelamin</h3>
-                    <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki"><label for="laki-laki">Laki-laki</label>
-                    <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan"><label for="perempuan">Perempuan</label>
+                    <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki" required>
+                    <label for="laki-laki">Laki-laki</label>
+                    <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan" required>
+                    <label for="perempuan">Perempuan</label>
                 </div>
-    
-                <div>
-                    <h3>Berat Badan</h3>
-                    <input type="number" id="input-bb">
-                </div>
-    
+
                 <div>
                     <h3>Usia</h3>
-                    <input type="number">
+                    <input class="container" type="number" placeholder="Masukkan usia Anda" required>
                 </div>
-    
-                <div>
-                    <h3>Tinggi Badan</h3>
-                    <input type="number" id="input-tb">
-                </div>
-    
-                <div>
-                    <button class="button-submit" type="button" onclick="formValidate()">Hitung BMI</button>
-                    <button>Reset</button>
-                </div>
-            </form>
-    
-            <article>
-                <h2>Keunggulan fitur</h2>
-                <div>Kasih keunggulannya</div>
-                <div>Keterangan mengenai Kalkulator</div>
-            </article>
-    
-        </aside>
 
+                <div>
+                    <h3>Berat Badan (kg)</h3>
+                    <input class="container" type="number" id="input-bb" placeholder="Masukkan berat badan Anda">
+                </div>
+
+                <div>
+                    <h3>Tinggi Badan (cm)</h3>
+                    <input class="container" type="number" id="input-tb" placeholder="Masukkan tinggi badan Anda">
+                </div>
+
+                <div>
+                    <button onclick="calculateBMI()" type="button" id="calculate" class="button-calculate">Hitung BMI</button>
+                    <button onclick="resetForm()" type="button" id="reset" class="button-reset">Reset</button>
+                </div>
+
+            </form>
 
         <aside>
             <article>
-                <p>Ini isinya kalimat pembuka kalkulator BMI</p>
-            </article>
-    
-            <form>
-                <div>
-                    <h3>Jenis Kelamin</h3>
-                    <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki"><label for="laki-laki">Laki-laki</label>
-                    <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan"><label for="perempuan">Perempuan</label>
-                </div>
-    
-                <div>
-                    <h3>Berat Badan</h3>
-                    <input type="number">
-                </div>
-    
-                <div>
-                    <h3>Usia</h3>
-                    <input type="number">
-                </div>
-    
-                <div>
-                    <h3>Tinggi Badan</h3>
-                    <input type="number">
-                </div>
-    
-                <div>
-                    <button>Hitung BMI</button>
-                    <button>Reset</button>
-                </div>
-            </form>
-    
-            <article>
-                <h2>Keunggulan fitur</h2>
-                <div>Kasih keunggulannya</div>
-                <div>Keterangan mengenai Kalkulator</div>
-            </article>
-    
+                <section id="hasil-bmi">
+                <h2>Rumus Hitung BMI</h2>                
+                <p>
+                    Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Berat Badan/Tinggi Badan Kuadrat.
+                </p>                
+                <p>
+                    Berat badan dalam satuan kilogram (kg)
+                </p>                
+                <p>
+                    Tinggi badan dalam satuan meter (m)
+                </p>
+                </section>
+                <br>
+                <header>
+                  <h2>Tabel Informasi BMI</h2>
+                </header>
+                <table class="table">
+                  <tr>
+                    <th>BMI</th>
+                    <th>Status Berat Badan</th>
+                  </tr>
+                  <tr>
+                    <td class="teks-kiri">Kurang dari 18.5</td>
+                    <td>Kekurangan berat badan (Kurus)</td>
+                  </tr>
+                  <tr>
+                    <td class="teks-kiri">18.5 - 24.9</td>
+                    <td>Normal (Ideal)</td>
+                  </tr>
+                  <tr>
+                    <td class="teks-kiri">25 - 29.9</td>
+                    <td>Kelebihan berat badan (Gemuk)</td>
+                  </tr>
+                  <tr>
+                    <td class="teks-kiri">30 atau lebih</td>
+                    <td>Obesitas</td>
+                  </tr>
+                </table>
+              </article>
         </aside>
     </main>
 
