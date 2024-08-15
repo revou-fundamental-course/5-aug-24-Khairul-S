@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BMI Calculator</title>
+
+    <!--Penghubung ke file CSS-->
     <link rel="stylesheet" href="css\style.css">
+
 </head>
 <body>
+  
+    <!--Judul Website-->
     <header>
         <h1>Kalkulator BMI</h1>
     </header>
+
       <main>
+
+            <!--Form pengisian BMI-->
             <form id="bmi-form">
                 <div>
                     <h3>Jenis Kelamin</h3>
@@ -34,7 +42,8 @@
                     <h3>Tinggi Badan (cm)</h3>
                     <input class="container" type="number" id="input-tb" placeholder="Masukkan tinggi badan Anda">
                 </div>
-
+                
+                <!--Disambungkan dengan JavaScript unuk form Validation-->
                 <div>
                     <button onclick="calculateBMI()" type="button" id="calculate" class="button-calculate">Hitung BMI</button>
                     <button onclick="resetForm()" type="button" id="reset" class="button-reset">Reset</button>
@@ -44,6 +53,8 @@
 
         <aside>
             <article>
+
+              <!--Penjelasan rumus hitung BMI-->
                 <section id="hasil-bmi">
                 <h2>Rumus Hitung BMI</h2>                
                 <p>
@@ -58,6 +69,8 @@
                 </section>
                 <br>
                 <header>
+
+                  <!--Informasi mengenai skala BMI-->
                   <h2>Tabel Informasi BMI</h2>
                 </header>
                 <table class="table">
@@ -86,8 +99,12 @@
         </aside>
     </main>
 
-    <footer></footer>
+    <!--footer-->
+    <footer>
+      <p>Made by Khairul</p>
+    </footer>
 
+    <!--Penghubung ke file JS-->
     <script src="js\script.js"></script>
 
 </body>

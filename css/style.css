@@ -1,10 +1,14 @@
+/* Warna dasar website */
 html {
     background-color: antiquewhite;
 }
+
+/* Untuk posisi Judul */
 header {
     text-align: center;
 }
 
+/* Main Layout */
 main {
     display: flex;
     width: 100%;
@@ -15,17 +19,20 @@ main {
     border-radius: 10px;
 }
 
+/* Form style */
 form {
     width: 100%;
     text-align: center;
     
 }
 
+/* container */
 .container {
     width: 530px;
     height: 25px;
 }
 
+/* Desing button "Hitung BMI" */
 .button-calculate {
     width: 28%;
     background-color: cornflowerblue;
@@ -39,6 +46,7 @@ form {
     margin-block-end: 35px;
 }
 
+/* Design button "Reset" */
 .button-reset {
     width: 15%;
     padding: 2vh;
@@ -50,7 +58,7 @@ form {
     cursor: pointer;
     margin-block-end: 35px;
 }
-
+/* Design header and paragraf*/
 h2 {
     margin-block-end: 0;
     margin-block-start: 14px;
@@ -66,6 +74,7 @@ p {
     margin-inline-start: 2px;
 }
 
+/* Design Table*/
 table {
     width: 95%;
     border-collapse: collapse;
@@ -95,6 +104,12 @@ table {
     text-align: center;
 }
 
+/*Fotter*/
+footer {
+    text-align: center;
+}
+
+/*Untuk tampilan mobile*/
 @media only screen and (max-width: 600px){
     main {
         flex-direction: column;

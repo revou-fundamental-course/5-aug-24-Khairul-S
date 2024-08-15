@@ -1,22 +1,24 @@
-console.log("Linked Succes")
-
+// Logika untuk button "Hitung BMI" 
 function calculateBMI() {
     let inputbb = document.getElementById('input-bb').value
     let inputtb = document.getElementById('input-tb').value
     console.log(inputbb)
     console.log(inputtb)
 
+    // Logika if dan else ketika form kosong atau diisi angka 0 atau angka kurang dari 0 
     if (inputbb == '' || inputtb == '') {
         alert('Jangan ada yang kosong')
         return
     } if (inputbb <= '0' || inputtb <= '0') {
         alert('Bro doesnt exist')
         return
-    } else {
-        let convertCmToM = inputtb / 100
+    } 
+    // Logika ketika form sudah diisi dengan benar
+    else {
+        let convertCmToM = inputtb / 100 // Konversi cm ke m
         let powertb = Math.pow(convertCmToM, 2)
         console.log(inputbb / powertb)
-        let bmi = (inputbb / powertb).toFixed(2);
+        let bmi = (inputbb / powertb).toFixed(2); // Perhitungan BMI
     let hasil = `BMI Anda adalah ${bmi}`;
     if (bmi < 18.5) {
         hasil += " (Kurus)";
@@ -28,15 +30,14 @@ function calculateBMI() {
         hasil += " (Obesitas)";
     }
 
+    // Untuk menampilkan hasil dari perhitungan BMI
     document.getElementById('hasil-bmi').innerHTML = `
     <h2 name="result1">${hasil}</h2>
     <div name="result1">BMI adalah indeks massa tubuh yang dapat digunakan untuk menentukan apakah berat badan Anda berada dalam kisaran sehat. BMI tidak memperhitungkan komposisi tubuh seperti otot dan lemak.</div>`;
     }
-
-    console.log('Form Submitted')
-
 }
 
+// Fungsi untuk reset form
 function resetForm() {
     document.getElementById("bmi-form").innerHTML = 
     `<form id="bmi-form">
